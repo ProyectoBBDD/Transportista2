@@ -13,7 +13,8 @@ Module ModuleConexion
 
     Public Function conection() As Boolean
         Dim baseDeDatos As String
-        baseDeDatos = "Data Source=NIO-PC\SQLEXPRESS;Initial Catalog=Transportista_BBDD;Integrated Security=True"
+        baseDeDatos = "Data Source=PAUL-GUERRERO;Initial Catalog=Transportista_BBDD;Integrated Security=True"
+        'baseDeDatos = "Data Source=NIO-PC\SQLEXPRESS;Initial Catalog=Transportista_BBDD;Integrated Security=True"
         Try
             ocCon = New SqlConnection(baseDeDatos)
             ocCon.Open()

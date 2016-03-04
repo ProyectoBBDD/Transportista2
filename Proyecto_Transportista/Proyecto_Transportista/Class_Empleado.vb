@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Public Class Class_Empleados
+Public Class Class_Empleado
 #Region "Declaracion de variables"
 
     Private Const NOMBRE_TABLA As String = "empleados"
