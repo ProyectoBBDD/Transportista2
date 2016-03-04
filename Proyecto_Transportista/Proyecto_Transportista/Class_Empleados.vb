@@ -23,11 +23,11 @@ Public Class Class_Empleados
 
 #Region "Encapsulamiento"
 
-    Public Property id_emp() As String
+    Public Property id_emp() As Integer
         Get
             id_emp = int_id_emp
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Integer)
             int_id_emp = value
         End Set
     End Property
@@ -109,7 +109,7 @@ Public Class Class_Empleados
 
     Public Function generar_idEmpleado() As Integer
         Dim max As Integer
-        SenteciaSQL = "SELECT MAX(id_emp) FROM empleados"
+        SenteciaSQL = "SELECT MAX(id_emp) FROM " & NOMBRE_TABLA
         Try
             If Not tabla_vacia() Then
                 Comando = New SqlCommand(SenteciaSQL, ocCon)
@@ -125,9 +125,10 @@ Public Class Class_Empleados
         End Try
 
     End Function
-    Public Function tabla_vacia() As Boolean
+
+    Private Function tabla_vacia() As Boolean
         Dim cont As Integer
-        SenteciaSQL = "SELECT COUNT(*) FROM empleados"
+        SenteciaSQL = "SELECT COUNT(*) FROM " & NOMBRE_TABLA
         Try
             Comando = New SqlCommand(SenteciaSQL, ocCon)
             cont = comando.ExecuteScalar
@@ -144,7 +145,38 @@ Public Class Class_Empleados
     Public Function crearEmpleado()
         int_id_emp = generar_idEmpleado()
         Try
-            SenteciaSQL = "insert into " & NOMBRE_TABLA & " values (" & int_id_emp & ", '" & Nombre & "', '" & Apellido1 & "', '" & Apellido2 & "', '" & Direccion & "', " & AñosEnLaEmpresa & ", '" & TipoPlataforma & "')"
+            SenteciaSQL = "insert into " & NOMBRE_TABLA & " values (" & int_id_emp & ", '" & str_nombre_emp & "', '" & str_apellido1_emp & "', '" & str_apellido2_emp & "', '" & str_direccion_emp & "', '" & date_fecha_nac & "', '" & str_email_emp & "', '" & str_cargo_emp & "', '" & str_telefono_fijo_emp & "', '" & str_telefono_movil_emp & "')"
+            Comando = New SqlCommand(SenteciaSQL, ocCon)
+            Comando.ExecuteNonQuery()
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+        Return True
+    End Function
+
+    Public Function borrarEmpleado()
+        Try
+            SenteciaSQL = "DELETE FROM " & NOMBRE_TABLA
+            SenteciaSQL = SenteciaSQL & " WHERE id_emp =" & int_id_emp
+            Comando = New SqlCommand(SenteciaSQL, ocCon)
+            Comando.ExecuteNonQuery()
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+        Return True
+    End Function
+
+    Public Function modificarEmpleado()
+        Try
+            SenteciaSQL = "update  " & NOMBRE_TABLA & " set id_emp ='" & int_id_emp &
+               "', nombre_emp ='" & str_nombre_emp & "', apellido1_emp ='" & str_apellido1_emp &
+               "', apellido2_emp ='" & str_apellido2_emp & "', direccion_emp = " & str_direccion_emp &
+               "', fecha_nac ='" & date_fecha_nac & "', email_emp = " & str_email_emp &
+               "', cargo_emp ='" & str_cargo_emp & "', telefono_fijo_emp = " & str_telefono_fijo_emp &
+               "', telefono_movil_emp ='" & str_telefono_movil_emp &
+                "' where id_emp = " & int_id_emp
             Comando = New SqlCommand(SenteciaSQL, ocCon)
             Comando.ExecuteNonQuery()
             Return True
