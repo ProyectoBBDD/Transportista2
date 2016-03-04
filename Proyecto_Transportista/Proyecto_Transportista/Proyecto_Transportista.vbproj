@@ -72,7 +72,6 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class_Cargo.vb" />
     <Compile Include="Class_Empleado.vb" />
     <Compile Include="Class_Cargos.vb" />
     <Compile Include="Class_Contenedores.vb" />
