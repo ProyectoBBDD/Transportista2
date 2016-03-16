@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class Class_Empleado
+
 #Region "Declaracion de variables"
 
     Private Const NOMBRE_TABLA As String = "empleados"
@@ -131,7 +132,7 @@ Public Class Class_Empleado
         SenteciaSQL = "SELECT COUNT(*) FROM " & NOMBRE_TABLA
         Try
             Comando = New SqlCommand(SenteciaSQL, ocCon)
-            cont = comando.ExecuteScalar
+            cont = Comando.ExecuteScalar
             If cont = 0 Then
                 Return True
             Else
@@ -186,4 +187,5 @@ Public Class Class_Empleado
         Return True
     End Function
 #End Region
+
 End Class

@@ -5,6 +5,10 @@ Module ModuleConexion
 
 #Region "Declaracion de varables"
 
+    Public castellano As Boolean = False
+    Public english As Boolean = False
+    Public euskera As Boolean = False
+
     Public ocCon As New SqlConnection
 
 #End Region
