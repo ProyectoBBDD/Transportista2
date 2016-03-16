@@ -1,18 +1,21 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Class_Historico_Salario
-    Private Const NOMBRE_TABLA As String = "historico_salario"
 
+#Region "Declaracion de variables"
+
+    Private Const NOMBRE_TABLA As String = "historico_salario"
 
     Private str_mes As String
     Private int_id_emp As Integer
     Private dou_ganancias As Double
+
     Private SenteciaSQL As String
     Private contador As Integer
     Private Comando As New SqlCommand
     Private adaptador As New SqlDataAdapter
 
-
+#End Region
 
 #Region "Encapsulamiento"
 
@@ -96,4 +99,5 @@ Public Class Class_Historico_Salario
         Return True
     End Function
 #End Region
+
 End Class

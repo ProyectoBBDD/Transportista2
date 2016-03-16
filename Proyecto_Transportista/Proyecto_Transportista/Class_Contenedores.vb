@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Class_Contenedores
+
 #Region "Declaracion de variables"
 
     Private Const NOMBRE_TABLA As String = "contenedores"

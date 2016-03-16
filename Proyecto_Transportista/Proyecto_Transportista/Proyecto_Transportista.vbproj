@@ -72,6 +72,78 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alta_cargo.Designer.vb">
+      <DependentUpon>Alta_cargo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alta_cargo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alta_contenedor.Designer.vb">
+      <DependentUpon>Alta_contenedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alta_contenedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alta_empleado.Designer.vb">
+      <DependentUpon>Alta_empleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alta_empleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alta_empresa.Designer.vb">
+      <DependentUpon>Alta_empresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alta_empresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alta_tipos.Designer.vb">
+      <DependentUpon>Alta_tipos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alta_tipos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alta_viajes.Designer.vb">
+      <DependentUpon>Alta_viajes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alta_viajes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baja_modif_cargo.Designer.vb">
+      <DependentUpon>Baja_modif_cargo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Baja_modif_cargo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baja_modif_contenedor.Designer.vb">
+      <DependentUpon>Baja_modif_contenedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Baja_modif_contenedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baja_modif_empleado.Designer.vb">
+      <DependentUpon>Baja_modif_empleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Baja_modif_empleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baja_modif_empresa.Designer.vb">
+      <DependentUpon>Baja_modif_empresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Baja_modif_empresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baja_modif_tipos.Designer.vb">
+      <DependentUpon>Baja_modif_tipos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Baja_modif_tipos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baja_modif_viajes.Designer.vb">
+      <DependentUpon>Baja_modif_viajes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Baja_modif_viajes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Class_Empleado.vb" />
     <Compile Include="Class_Cargos.vb" />
     <Compile Include="Class_Contenedores.vb" />
@@ -79,6 +151,48 @@
     <Compile Include="Class_Historico_Salario.vb" />
     <Compile Include="Class_Tipos.vb" />
     <Compile Include="Class_Viajes.vb" />
+    <Compile Include="Consulta_cargos.Designer.vb">
+      <DependentUpon>Consulta_cargos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta_cargos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_contenedores.Designer.vb">
+      <DependentUpon>Consulta_contenedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta_contenedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_empleados.Designer.vb">
+      <DependentUpon>Consulta_empleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta_empleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_empresas.Designer.vb">
+      <DependentUpon>Consulta_empresas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta_empresas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_historico_salarios.Designer.vb">
+      <DependentUpon>Consulta_historico_salarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta_historico_salarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_tipos.Designer.vb">
+      <DependentUpon>Consulta_tipos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta_tipos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_viajes.Designer.vb">
+      <DependentUpon>Consulta_viajes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta_viajes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +229,63 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Alta_cargo.resx">
+      <DependentUpon>Alta_cargo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alta_contenedor.resx">
+      <DependentUpon>Alta_contenedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alta_empleado.resx">
+      <DependentUpon>Alta_empleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alta_empresa.resx">
+      <DependentUpon>Alta_empresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alta_tipos.resx">
+      <DependentUpon>Alta_tipos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alta_viajes.resx">
+      <DependentUpon>Alta_viajes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Baja_modif_cargo.resx">
+      <DependentUpon>Baja_modif_cargo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Baja_modif_contenedor.resx">
+      <DependentUpon>Baja_modif_contenedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Baja_modif_empleado.resx">
+      <DependentUpon>Baja_modif_empleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Baja_modif_empresa.resx">
+      <DependentUpon>Baja_modif_empresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Baja_modif_tipos.resx">
+      <DependentUpon>Baja_modif_tipos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Baja_modif_viajes.resx">
+      <DependentUpon>Baja_modif_viajes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_cargos.resx">
+      <DependentUpon>Consulta_cargos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_contenedores.resx">
+      <DependentUpon>Consulta_contenedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_empleados.resx">
+      <DependentUpon>Consulta_empleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_empresas.resx">
+      <DependentUpon>Consulta_empresas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_historico_salarios.resx">
+      <DependentUpon>Consulta_historico_salarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_tipos.resx">
+      <DependentUpon>Consulta_tipos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_viajes.resx">
+      <DependentUpon>Consulta_viajes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
