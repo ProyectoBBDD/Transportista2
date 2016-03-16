@@ -4,7 +4,7 @@
 
     Private Sub Baja_modif_empleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If castellano Then
-            Me.Text = "Dar de alta empleado"
+            Me.Text = "Dar de baja empleado"
         ElseIf english Then
             traducirIngles()
         ElseIf euskera Then
