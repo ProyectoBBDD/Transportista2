@@ -31,6 +31,7 @@ Partial Class FormMain
         Me.ContenedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.TiposToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViajesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HistoricoSalariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AltasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadosToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpresasToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
@@ -52,14 +53,14 @@ Partial Class FormMain
         Me.ContenedoresToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.TiposToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViajesToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HistoricoSalariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EstadisticToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalirToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BusquedaToolStripMenuItem, Me.AltasToolStripMenuItem, Me.BajasToolStripMenuItem, Me.ModificacionesToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BusquedaToolStripMenuItem, Me.AltasToolStripMenuItem, Me.BajasToolStripMenuItem, Me.ModificacionesToolStripMenuItem, Me.EstadisticToolStripMenuItem, Me.SalirToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(580, 24)
@@ -109,6 +110,12 @@ Partial Class FormMain
         Me.ViajesToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
         Me.ViajesToolStripMenuItem.Text = "Viajes"
         '
+        'HistoricoSalariosToolStripMenuItem
+        '
+        Me.HistoricoSalariosToolStripMenuItem.Name = "HistoricoSalariosToolStripMenuItem"
+        Me.HistoricoSalariosToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.HistoricoSalariosToolStripMenuItem.Text = "Historico Salarios"
+        '
         'AltasToolStripMenuItem
         '
         Me.AltasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem2, Me.EmpresasToolStripMenuItem2, Me.CargosToolStripMenuItem2, Me.ContenedoresToolStripMenuItem2, Me.TiposToolStripMenuItem1, Me.ViajesToolStripMenuItem1})
@@ -119,37 +126,37 @@ Partial Class FormMain
         'EmpleadosToolStripMenuItem2
         '
         Me.EmpleadosToolStripMenuItem2.Name = "EmpleadosToolStripMenuItem2"
-        Me.EmpleadosToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.EmpleadosToolStripMenuItem2.Size = New System.Drawing.Size(148, 22)
         Me.EmpleadosToolStripMenuItem2.Text = "Empleados"
         '
         'EmpresasToolStripMenuItem2
         '
         Me.EmpresasToolStripMenuItem2.Name = "EmpresasToolStripMenuItem2"
-        Me.EmpresasToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.EmpresasToolStripMenuItem2.Size = New System.Drawing.Size(148, 22)
         Me.EmpresasToolStripMenuItem2.Text = "Empresas"
         '
         'CargosToolStripMenuItem2
         '
         Me.CargosToolStripMenuItem2.Name = "CargosToolStripMenuItem2"
-        Me.CargosToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.CargosToolStripMenuItem2.Size = New System.Drawing.Size(148, 22)
         Me.CargosToolStripMenuItem2.Text = "Cargos"
         '
         'ContenedoresToolStripMenuItem2
         '
         Me.ContenedoresToolStripMenuItem2.Name = "ContenedoresToolStripMenuItem2"
-        Me.ContenedoresToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.ContenedoresToolStripMenuItem2.Size = New System.Drawing.Size(148, 22)
         Me.ContenedoresToolStripMenuItem2.Text = "Contenedores"
         '
         'TiposToolStripMenuItem1
         '
         Me.TiposToolStripMenuItem1.Name = "TiposToolStripMenuItem1"
-        Me.TiposToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.TiposToolStripMenuItem1.Size = New System.Drawing.Size(148, 22)
         Me.TiposToolStripMenuItem1.Text = "Tipos"
         '
         'ViajesToolStripMenuItem1
         '
         Me.ViajesToolStripMenuItem1.Name = "ViajesToolStripMenuItem1"
-        Me.ViajesToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ViajesToolStripMenuItem1.Size = New System.Drawing.Size(148, 22)
         Me.ViajesToolStripMenuItem1.Text = "Viajes"
         '
         'BajasToolStripMenuItem
@@ -162,37 +169,37 @@ Partial Class FormMain
         'EmpleadosToolStripMenuItem3
         '
         Me.EmpleadosToolStripMenuItem3.Name = "EmpleadosToolStripMenuItem3"
-        Me.EmpleadosToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
+        Me.EmpleadosToolStripMenuItem3.Size = New System.Drawing.Size(148, 22)
         Me.EmpleadosToolStripMenuItem3.Text = "Empleados"
         '
         'EmpresasToolStripMenuItem3
         '
         Me.EmpresasToolStripMenuItem3.Name = "EmpresasToolStripMenuItem3"
-        Me.EmpresasToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
+        Me.EmpresasToolStripMenuItem3.Size = New System.Drawing.Size(148, 22)
         Me.EmpresasToolStripMenuItem3.Text = "Empresas"
         '
         'CargosToolStripMenuItem3
         '
         Me.CargosToolStripMenuItem3.Name = "CargosToolStripMenuItem3"
-        Me.CargosToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
+        Me.CargosToolStripMenuItem3.Size = New System.Drawing.Size(148, 22)
         Me.CargosToolStripMenuItem3.Text = "Cargos"
         '
         'ContenedoresToolStripMenuItem3
         '
         Me.ContenedoresToolStripMenuItem3.Name = "ContenedoresToolStripMenuItem3"
-        Me.ContenedoresToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
+        Me.ContenedoresToolStripMenuItem3.Size = New System.Drawing.Size(148, 22)
         Me.ContenedoresToolStripMenuItem3.Text = "Contenedores"
         '
         'TiposToolStripMenuItem2
         '
         Me.TiposToolStripMenuItem2.Name = "TiposToolStripMenuItem2"
-        Me.TiposToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.TiposToolStripMenuItem2.Size = New System.Drawing.Size(148, 22)
         Me.TiposToolStripMenuItem2.Text = "Tipos"
         '
         'ViajesToolStripMenuItem2
         '
         Me.ViajesToolStripMenuItem2.Name = "ViajesToolStripMenuItem2"
-        Me.ViajesToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.ViajesToolStripMenuItem2.Size = New System.Drawing.Size(148, 22)
         Me.ViajesToolStripMenuItem2.Text = "Viajes"
         '
         'ModificacionesToolStripMenuItem
@@ -205,50 +212,50 @@ Partial Class FormMain
         'EmpleadosToolStripMenuItem4
         '
         Me.EmpleadosToolStripMenuItem4.Name = "EmpleadosToolStripMenuItem4"
-        Me.EmpleadosToolStripMenuItem4.Size = New System.Drawing.Size(152, 22)
+        Me.EmpleadosToolStripMenuItem4.Size = New System.Drawing.Size(148, 22)
         Me.EmpleadosToolStripMenuItem4.Text = "Empleados"
         '
         'EmpresasToolStripMenuItem4
         '
         Me.EmpresasToolStripMenuItem4.Name = "EmpresasToolStripMenuItem4"
-        Me.EmpresasToolStripMenuItem4.Size = New System.Drawing.Size(152, 22)
+        Me.EmpresasToolStripMenuItem4.Size = New System.Drawing.Size(148, 22)
         Me.EmpresasToolStripMenuItem4.Text = "Empresas"
         '
         'CargosToolStripMenuItem4
         '
         Me.CargosToolStripMenuItem4.Name = "CargosToolStripMenuItem4"
-        Me.CargosToolStripMenuItem4.Size = New System.Drawing.Size(152, 22)
+        Me.CargosToolStripMenuItem4.Size = New System.Drawing.Size(148, 22)
         Me.CargosToolStripMenuItem4.Text = "Cargos"
         '
         'ContenedoresToolStripMenuItem4
         '
         Me.ContenedoresToolStripMenuItem4.Name = "ContenedoresToolStripMenuItem4"
-        Me.ContenedoresToolStripMenuItem4.Size = New System.Drawing.Size(152, 22)
+        Me.ContenedoresToolStripMenuItem4.Size = New System.Drawing.Size(148, 22)
         Me.ContenedoresToolStripMenuItem4.Text = "Contenedores"
         '
         'TiposToolStripMenuItem3
         '
         Me.TiposToolStripMenuItem3.Name = "TiposToolStripMenuItem3"
-        Me.TiposToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
+        Me.TiposToolStripMenuItem3.Size = New System.Drawing.Size(148, 22)
         Me.TiposToolStripMenuItem3.Text = "Tipos"
         '
         'ViajesToolStripMenuItem3
         '
         Me.ViajesToolStripMenuItem3.Name = "ViajesToolStripMenuItem3"
-        Me.ViajesToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
+        Me.ViajesToolStripMenuItem3.Size = New System.Drawing.Size(148, 22)
         Me.ViajesToolStripMenuItem3.Text = "Viajes"
         '
-        'SalirToolStripMenuItem
+        'EstadisticToolStripMenuItem
         '
-        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
-        Me.SalirToolStripMenuItem.Text = "Salir"
+        Me.EstadisticToolStripMenuItem.Name = "EstadisticToolStripMenuItem"
+        Me.EstadisticToolStripMenuItem.Size = New System.Drawing.Size(79, 20)
+        Me.EstadisticToolStripMenuItem.Text = "Estadisticas"
         '
-        'HistoricoSalariosToolStripMenuItem
+        'SalirToolStripMenuItem1
         '
-        Me.HistoricoSalariosToolStripMenuItem.Name = "HistoricoSalariosToolStripMenuItem"
-        Me.HistoricoSalariosToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
-        Me.HistoricoSalariosToolStripMenuItem.Text = "Historico Salarios"
+        Me.SalirToolStripMenuItem1.Name = "SalirToolStripMenuItem1"
+        Me.SalirToolStripMenuItem1.Size = New System.Drawing.Size(41, 20)
+        Me.SalirToolStripMenuItem1.Text = "Salir"
         '
         'FormMain
         '
@@ -295,6 +302,7 @@ Partial Class FormMain
     Friend WithEvents ContenedoresToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TiposToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ViajesToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SalirToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EstadisticToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HistoricoSalariosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SalirToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 End Class

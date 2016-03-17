@@ -10,9 +10,6 @@
         End If
     End Sub
 
-    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
-        Dispose()
-    End Sub
 
     Public Sub traducirIngles()
         Me.Text = "Welcome"
@@ -20,7 +17,7 @@
         AltasToolStripMenuItem.Text = "Register"
         BajasToolStripMenuItem.Text = "Unregister"
         ModificacionesToolStripMenuItem.Text = "Modifications"
-        SalirToolStripMenuItem.Text = "Exit"
+        EstadisticToolStripMenuItem.Text = "Exit"
 
         EmpleadosToolStripMenuItem1.Text = "Employees"
         EmpleadosToolStripMenuItem2.Text = "Employees"
@@ -56,7 +53,7 @@
         AltasToolStripMenuItem.Text = "Alta"
         BajasToolStripMenuItem.Text = "Baja"
         ModificacionesToolStripMenuItem.Text = "Aldaketak"
-        SalirToolStripMenuItem.Text = "Irten"
+        EstadisticToolStripMenuItem.Text = "Irten"
 
         EmpleadosToolStripMenuItem1.Text = "Langileak"
         EmpleadosToolStripMenuItem2.Text = "Langileak"
@@ -183,5 +180,13 @@
 
     Private Sub ViajesToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles ViajesToolStripMenuItem3.Click
         Baja_modif_viajes.Show()
+    End Sub
+
+    Private Sub SalirToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem1.Click
+        dispose()
+    End Sub
+
+    Private Sub EstadisticToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EstadisticToolStripMenuItem.Click
+
     End Sub
 End Class
