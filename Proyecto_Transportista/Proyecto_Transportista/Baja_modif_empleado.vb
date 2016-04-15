@@ -1,8 +1,9 @@
 ﻿Public Class Baja_modif_empleado
 
     Private ClsEmpleados As New Class_Empleado
-
+    Private primeraVez As New Boolean
     Private Sub Baja_modif_empleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        primeraVez = True
         cbEmple.DataSource = ClsEmpleados.llenarComboBoxTrab
         cbEmple.ValueMember = "id_emp"
         cbEmple.DisplayMember = "id_emp"
@@ -13,6 +14,7 @@
         ElseIf euskera Then
             traducirEuskera()
         End If
+        primeraVez = False
     End Sub
 
     Public Sub traducirIngles()
@@ -67,5 +69,46 @@
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Dispose()
+    End Sub
+
+    Public Sub recogerDatos()
+        Dim busqueda As New DataTable
+        If primeraVez Then
+            busqueda = ClsEmpleados.refrescar
+            If busqueda.Rows.Count <> 0 Then
+                txtNombre.Text = busqueda.Rows(0).Item(1)
+                txtApellido1.Text = busqueda.Rows(0).Item(2)
+                txtApellido2.Text = busqueda.Rows(0).Item(3)
+                txtDireccion.Text = busqueda.Rows(0).Item(4)
+                txtNacimiento.Text = busqueda.Rows(0).Item(5)
+                txtEmail.Text = busqueda.Rows(0).Item(6)
+                txtCargo.Text = busqueda.Rows(0).Item(7)
+                txtTelFijo.Text = busqueda.Rows(0).Item(8)
+                txtTelMovil.Text = busqueda.Rows(0).Item(9)
+            End If
+        Else
+            busqueda = ClsEmpleados.recogerDatos
+            If busqueda.Rows.Count <> 0 Then
+                txtNombre.Text = busqueda.Rows(0).Item(1)
+                txtApellido1.Text = busqueda.Rows(0).Item(2)
+                txtApellido2.Text = busqueda.Rows(0).Item(3)
+                txtDireccion.Text = busqueda.Rows(0).Item(4)
+                txtNacimiento.Text = busqueda.Rows(0).Item(5)
+                txtEmail.Text = busqueda.Rows(0).Item(6)
+                txtCargo.Text = busqueda.Rows(0).Item(7)
+                txtTelFijo.Text = busqueda.Rows(0).Item(8)
+                txtTelMovil.Text = busqueda.Rows(0).Item(9)
+            End If
+        End If
+
+    End Sub
+
+    Private Sub cbEmple_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cbEmple.SelectedIndexChanged
+        If primeraVez Then
+            recogerDatos()
+        Else
+            ClsEmpleados.id_emp = cbEmple.SelectedValue.ToString
+            recogerDatos()
+        End If
     End Sub
 End Class

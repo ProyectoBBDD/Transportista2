@@ -200,6 +200,36 @@ Public Class Class_Empleado
         End Try
         Return busqueda
     End Function
+
+    Public Function refrescar() As DataTable
+        Dim dtTabEmpleados As New DataTable
+        SenteciaSQL = "SELECT * FROM " + NOMBRE_TABLA + " WHERE 1=1"
+        Try
+            Comando = New SqlCommand(SenteciaSQL, ocCon)
+            adaptador = New SqlDataAdapter(Comando)
+            adaptador.Fill(dtTabEmpleados)
+            Return dtTabEmpleados
+        Catch ex As Exception
+        End Try
+        Return dtTabEmpleados
+    End Function
+
+    Public Function recogerDatos() As DataTable
+
+        Dim dtTabEmpleados As New DataTable
+        Dim Comando As New SqlCommand
+        Dim adaptador As New SqlDataAdapter
+        SenteciaSQL = "SELECT * FROM " + NOMBRE_TABLA + " WHERE id_emp = " & int_id_emp
+        Try
+            Comando = New SqlCommand(SenteciaSQL, ocCon)
+            adaptador = New SqlDataAdapter(Comando)
+            dtTabEmpleados = New DataTable()
+            adaptador.Fill(dtTabEmpleados)
+            Return dtTabEmpleados
+        Catch ex As Exception
+        End Try
+        Return dtTabEmpleados
+    End Function
 #End Region
 
 End Class
