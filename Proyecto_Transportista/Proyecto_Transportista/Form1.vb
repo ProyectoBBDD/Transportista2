@@ -20,4 +20,10 @@
         english = True
         FormMain.Show()
     End Sub
+
+    Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        If Not conection() Then
+            MessageBox.Show("Error al conectarse a la base de datos")
+        End If
+    End Sub
 End Class

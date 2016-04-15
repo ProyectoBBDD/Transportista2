@@ -22,7 +22,7 @@ Partial Class Baja_modif_empleado
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbEmple = New System.Windows.Forms.ComboBox()
         Me.lblTelMovil = New System.Windows.Forms.Label()
         Me.txtTelMovil = New System.Windows.Forms.TextBox()
         Me.lblTelFijo = New System.Windows.Forms.Label()
@@ -46,13 +46,13 @@ Partial Class Baja_modif_empleado
         Me.lblID = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'cbEmple
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(152, 26)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(178, 21)
-        Me.ComboBox1.TabIndex = 0
+        Me.cbEmple.FormattingEnabled = True
+        Me.cbEmple.Location = New System.Drawing.Point(152, 26)
+        Me.cbEmple.Name = "cbEmple"
+        Me.cbEmple.Size = New System.Drawing.Size(178, 21)
+        Me.cbEmple.TabIndex = 0
         '
         'lblTelMovil
         '
@@ -260,14 +260,14 @@ Partial Class Baja_modif_empleado
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnBaja)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbEmple)
         Me.Name = "Baja_modif_empleado"
         Me.Text = "Baja_empleado"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents cbEmple As System.Windows.Forms.ComboBox
     Friend WithEvents lblTelMovil As System.Windows.Forms.Label
     Friend WithEvents txtTelMovil As System.Windows.Forms.TextBox
     Friend WithEvents lblTelFijo As System.Windows.Forms.Label

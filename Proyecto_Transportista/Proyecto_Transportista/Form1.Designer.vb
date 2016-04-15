@@ -30,7 +30,7 @@ Partial Class Form1
         '
         'btnCastellano
         '
-        Me.btnCastellano.Font = New System.Drawing.Font("Rockwell", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCastellano.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCastellano.Location = New System.Drawing.Point(27, 339)
         Me.btnCastellano.Name = "btnCastellano"
         Me.btnCastellano.Size = New System.Drawing.Size(192, 49)
@@ -40,7 +40,7 @@ Partial Class Form1
         '
         'btnEuskera
         '
-        Me.btnEuskera.Font = New System.Drawing.Font("Rockwell", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEuskera.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEuskera.Location = New System.Drawing.Point(217, 435)
         Me.btnEuskera.Name = "btnEuskera"
         Me.btnEuskera.Size = New System.Drawing.Size(192, 49)
@@ -50,7 +50,7 @@ Partial Class Form1
         '
         'btnEnglish
         '
-        Me.btnEnglish.Font = New System.Drawing.Font("Rockwell", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEnglish.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEnglish.Location = New System.Drawing.Point(406, 339)
         Me.btnEnglish.Name = "btnEnglish"
         Me.btnEnglish.Size = New System.Drawing.Size(192, 49)

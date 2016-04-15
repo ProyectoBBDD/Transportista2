@@ -3,6 +3,9 @@
     Private ClsEmpleados As New Class_Empleado
 
     Private Sub Baja_modif_empleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cbEmple.DataSource = ClsEmpleados.llenarComboBoxTrab
+        cbEmple.ValueMember = "id_emp"
+        cbEmple.DisplayMember = "id_emp"
         If castellano Then
             Me.Text = "Dar de baja empleado"
         ElseIf english Then

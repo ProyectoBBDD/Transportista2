@@ -58,7 +58,7 @@ Public Class Class_Tipos
 
     Public Function crearTipo()
         Try
-            SenteciaSQL = "insert into " & NOMBRE_TABLA & " values ('" & str_tipo & "', '" & str_tamaino & ", '" & dou_peso_maximo & ", '" & dou_ganancia & ")"
+            SenteciaSQL = "insert into " & NOMBRE_TABLA & " values ('" & str_tipo & "', '" & str_tamaino & "', " & dou_peso_maximo & ", " & dou_ganancia & ")"
             Comando = New SqlCommand(SenteciaSQL, ocCon)
             Comando.ExecuteNonQuery()
             Return True

@@ -40,7 +40,7 @@ Public Class Class_Cargos
 
     Public Function crearCargo()
         Try
-            SenteciaSQL = "insert into " & NOMBRE_TABLA & " values ('" & str_nombre_cargo & "', '" & str_descripcion_cargo & ")"
+            SenteciaSQL = "insert into " & NOMBRE_TABLA & " values ('" & str_nombre_cargo & "', '" & str_descripcion_cargo & "')"
             Comando = New SqlCommand(SenteciaSQL, ocCon)
             Comando.ExecuteNonQuery()
             Return True

@@ -40,8 +40,9 @@ Public Class Class_Contenedores
 #Region "Funciones"
 
     Public Function crearContenedor()
+        int_id_contenedor = generar_idContenedor()
         Try
-            SenteciaSQL = "insert into " & NOMBRE_TABLA & " values (" & int_id_contenedor & ", '" & str_tipo & ")"
+            SenteciaSQL = "insert into " & NOMBRE_TABLA & " values (" & int_id_contenedor & ", '" & str_tipo & "')"
             Comando = New SqlCommand(SenteciaSQL, ocCon)
             Comando.ExecuteNonQuery()
             Return True
@@ -49,6 +50,41 @@ Public Class Class_Contenedores
             Return False
         End Try
         Return True
+    End Function
+
+    Public Function generar_idContenedor() As Integer
+        Dim max As Integer
+        Try
+            If Not tabla_vacia() Then
+                SenteciaSQL = "SELECT MAX(id_contenedor) FROM " & NOMBRE_TABLA
+                Comando = New SqlCommand(SenteciaSQL, ocCon)
+                max = Comando.ExecuteScalar
+                Return max + 1
+            Else
+                max = 1
+                Return max
+            End If
+            Return True
+        Catch ex As Exception
+            Return 1
+        End Try
+
+    End Function
+
+    Private Function tabla_vacia() As Boolean
+        Dim cont As Integer
+        SenteciaSQL = "SELECT COUNT(*) FROM " & NOMBRE_TABLA
+        Try
+            Comando = New SqlCommand(SenteciaSQL, ocCon)
+            cont = Comando.ExecuteScalar
+            If cont = 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Return Nothing
+        End Try
     End Function
 
     Public Function borrarContenedor()

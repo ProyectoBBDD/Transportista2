@@ -110,9 +110,9 @@ Public Class Class_Empleado
 
     Public Function generar_idEmpleado() As Integer
         Dim max As Integer
-        SenteciaSQL = "SELECT MAX(id_emp) FROM " & NOMBRE_TABLA
         Try
             If Not tabla_vacia() Then
+                SenteciaSQL = "SELECT MAX(id_emp) FROM " & NOMBRE_TABLA
                 Comando = New SqlCommand(SenteciaSQL, ocCon)
                 max = Comando.ExecuteScalar
                 Return max + 1
@@ -185,6 +185,20 @@ Public Class Class_Empleado
             Return False
         End Try
         Return True
+    End Function
+
+    Public Function llenarComboBoxTrab() As DataTable
+        Dim busqueda As New DataTable
+        SenteciaSQL = "select id_emp from empleados"
+        Try
+            Comando = New SqlCommand(SenteciaSQL, ocCon)
+            adaptador = New SqlDataAdapter(Comando)
+            busqueda = New DataTable()
+            adaptador.Fill(busqueda)
+            Return busqueda
+        Catch ex As Exception
+        End Try
+        Return busqueda
     End Function
 #End Region
 
