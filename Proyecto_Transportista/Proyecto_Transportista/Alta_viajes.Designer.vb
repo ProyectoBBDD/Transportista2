@@ -27,13 +27,13 @@ Partial Class Alta_viajes
         Me.lblGanancia = New System.Windows.Forms.Label()
         Me.txtGanancia = New System.Windows.Forms.TextBox()
         Me.lblContenedor = New System.Windows.Forms.Label()
-        Me.txtContenedor = New System.Windows.Forms.TextBox()
         Me.lblEmpresa = New System.Windows.Forms.Label()
-        Me.txtEmpresa = New System.Windows.Forms.TextBox()
         Me.lblEmpleado = New System.Windows.Forms.Label()
-        Me.txtEmpleado = New System.Windows.Forms.TextBox()
         Me.lblEntrega = New System.Windows.Forms.Label()
         Me.txtEntrega = New System.Windows.Forms.TextBox()
+        Me.cbIdEmple = New System.Windows.Forms.ComboBox()
+        Me.cbIdEmpresa = New System.Windows.Forms.ComboBox()
+        Me.cbIdContenedor = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'btnSalir
@@ -79,13 +79,6 @@ Partial Class Alta_viajes
         Me.lblContenedor.TabIndex = 15
         Me.lblContenedor.Text = "ID del contenedor"
         '
-        'txtContenedor
-        '
-        Me.txtContenedor.Location = New System.Drawing.Point(138, 136)
-        Me.txtContenedor.Name = "txtContenedor"
-        Me.txtContenedor.Size = New System.Drawing.Size(122, 20)
-        Me.txtContenedor.TabIndex = 14
-        '
         'lblEmpresa
         '
         Me.lblEmpresa.AutoSize = True
@@ -95,13 +88,6 @@ Partial Class Alta_viajes
         Me.lblEmpresa.TabIndex = 13
         Me.lblEmpresa.Text = "ID de la empresa"
         '
-        'txtEmpresa
-        '
-        Me.txtEmpresa.Location = New System.Drawing.Point(138, 88)
-        Me.txtEmpresa.Name = "txtEmpresa"
-        Me.txtEmpresa.Size = New System.Drawing.Size(122, 20)
-        Me.txtEmpresa.TabIndex = 12
-        '
         'lblEmpleado
         '
         Me.lblEmpleado.AutoSize = True
@@ -110,13 +96,6 @@ Partial Class Alta_viajes
         Me.lblEmpleado.Size = New System.Drawing.Size(84, 13)
         Me.lblEmpleado.TabIndex = 11
         Me.lblEmpleado.Text = "ID del empleado"
-        '
-        'txtEmpleado
-        '
-        Me.txtEmpleado.Location = New System.Drawing.Point(138, 40)
-        Me.txtEmpleado.Name = "txtEmpleado"
-        Me.txtEmpleado.Size = New System.Drawing.Size(122, 20)
-        Me.txtEmpleado.TabIndex = 10
         '
         'lblEntrega
         '
@@ -134,21 +113,45 @@ Partial Class Alta_viajes
         Me.txtEntrega.Size = New System.Drawing.Size(122, 20)
         Me.txtEntrega.TabIndex = 18
         '
+        'cbIdEmple
+        '
+        Me.cbIdEmple.FormattingEnabled = True
+        Me.cbIdEmple.Location = New System.Drawing.Point(141, 43)
+        Me.cbIdEmple.Name = "cbIdEmple"
+        Me.cbIdEmple.Size = New System.Drawing.Size(121, 21)
+        Me.cbIdEmple.TabIndex = 20
+        '
+        'cbIdEmpresa
+        '
+        Me.cbIdEmpresa.FormattingEnabled = True
+        Me.cbIdEmpresa.Location = New System.Drawing.Point(141, 87)
+        Me.cbIdEmpresa.Name = "cbIdEmpresa"
+        Me.cbIdEmpresa.Size = New System.Drawing.Size(121, 21)
+        Me.cbIdEmpresa.TabIndex = 21
+        '
+        'cbIdContenedor
+        '
+        Me.cbIdContenedor.FormattingEnabled = True
+        Me.cbIdContenedor.Location = New System.Drawing.Point(141, 136)
+        Me.cbIdContenedor.Name = "cbIdContenedor"
+        Me.cbIdContenedor.Size = New System.Drawing.Size(121, 21)
+        Me.cbIdContenedor.TabIndex = 22
+        '
         'Alta_viajes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(548, 234)
+        Me.Controls.Add(Me.cbIdContenedor)
+        Me.Controls.Add(Me.cbIdEmpresa)
+        Me.Controls.Add(Me.cbIdEmple)
         Me.Controls.Add(Me.lblEntrega)
         Me.Controls.Add(Me.txtEntrega)
         Me.Controls.Add(Me.lblGanancia)
         Me.Controls.Add(Me.txtGanancia)
         Me.Controls.Add(Me.lblContenedor)
-        Me.Controls.Add(Me.txtContenedor)
         Me.Controls.Add(Me.lblEmpresa)
-        Me.Controls.Add(Me.txtEmpresa)
         Me.Controls.Add(Me.lblEmpleado)
-        Me.Controls.Add(Me.txtEmpleado)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnAlta)
         Me.Name = "Alta_viajes"
@@ -162,11 +165,11 @@ Partial Class Alta_viajes
     Friend WithEvents lblGanancia As System.Windows.Forms.Label
     Friend WithEvents txtGanancia As System.Windows.Forms.TextBox
     Friend WithEvents lblContenedor As System.Windows.Forms.Label
-    Friend WithEvents txtContenedor As System.Windows.Forms.TextBox
     Friend WithEvents lblEmpresa As System.Windows.Forms.Label
-    Friend WithEvents txtEmpresa As System.Windows.Forms.TextBox
     Friend WithEvents lblEmpleado As System.Windows.Forms.Label
-    Friend WithEvents txtEmpleado As System.Windows.Forms.TextBox
     Friend WithEvents lblEntrega As System.Windows.Forms.Label
     Friend WithEvents txtEntrega As System.Windows.Forms.TextBox
+    Friend WithEvents cbIdEmple As System.Windows.Forms.ComboBox
+    Friend WithEvents cbIdEmpresa As System.Windows.Forms.ComboBox
+    Friend WithEvents cbIdContenedor As System.Windows.Forms.ComboBox
 End Class

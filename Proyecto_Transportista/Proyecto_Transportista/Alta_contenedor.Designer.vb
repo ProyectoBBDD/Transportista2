@@ -25,7 +25,7 @@ Partial Class Alta_contenedor
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnAlta = New System.Windows.Forms.Button()
         Me.lblTipo = New System.Windows.Forms.Label()
-        Me.txtTipo = New System.Windows.Forms.TextBox()
+        Me.cbTipo = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'btnSalir
@@ -55,20 +55,21 @@ Partial Class Alta_contenedor
         Me.lblTipo.TabIndex = 5
         Me.lblTipo.Text = "Tipo"
         '
-        'txtTipo
+        'cbTipo
         '
-        Me.txtTipo.Location = New System.Drawing.Point(140, 51)
-        Me.txtTipo.Name = "txtTipo"
-        Me.txtTipo.Size = New System.Drawing.Size(122, 20)
-        Me.txtTipo.TabIndex = 4
+        Me.cbTipo.FormattingEnabled = True
+        Me.cbTipo.Location = New System.Drawing.Point(140, 54)
+        Me.cbTipo.Name = "cbTipo"
+        Me.cbTipo.Size = New System.Drawing.Size(121, 21)
+        Me.cbTipo.TabIndex = 6
         '
         'Alta_contenedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(369, 176)
+        Me.Controls.Add(Me.cbTipo)
         Me.Controls.Add(Me.lblTipo)
-        Me.Controls.Add(Me.txtTipo)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnAlta)
         Me.Name = "Alta_contenedor"
@@ -80,5 +81,5 @@ Partial Class Alta_contenedor
     Friend WithEvents btnSalir As System.Windows.Forms.Button
     Friend WithEvents btnAlta As System.Windows.Forms.Button
     Friend WithEvents lblTipo As System.Windows.Forms.Label
-    Friend WithEvents txtTipo As System.Windows.Forms.TextBox
+    Friend WithEvents cbTipo As System.Windows.Forms.ComboBox
 End Class

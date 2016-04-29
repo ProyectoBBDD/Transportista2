@@ -1,6 +1,7 @@
 ﻿Public Class Alta_empleado
 
     Private ClsEmpleados As New Class_Empleado
+    Private ClsCargo As New Class_Cargos
 
     Private Sub Alta_empleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If castellano Then
@@ -10,6 +11,9 @@
         ElseIf euskera Then
             traducirEuskera()
         End If
+
+        cbCargo.ValueMember = "nombre_cargo"
+        cbCargo.DataSource = ClsCargo.refrescar()
     End Sub
 
     Public Sub traducirIngles()
@@ -48,7 +52,7 @@
             ClsEmpleados.direccion_emp = txtDireccion.Text
             ClsEmpleados.fecha_nac = txtNacimiento.Text
             ClsEmpleados.email_emp = txtEmail.Text
-            ClsEmpleados.cargo_emp = txtCargo.Text
+            ClsEmpleados.cargo_emp = cbCargo.Text
             ClsEmpleados.telefono_fijo_emp = txtTelFijo.Text
             ClsEmpleados.telefono_movil_emp = txtTelMovil.Text
             If ClsEmpleados.crearEmpleado() Then
@@ -83,27 +87,19 @@
         Dispose()
     End Sub
 
-    Private Function comprobarCampos()
-        If txtNombre.Text <> vbNullString Then
-            If txtApellido1.Text <> vbNullString Then
-                If txtApellido2.Text <> vbNullString Then
-                    If txtDireccion.Text <> vbNullString Then
-                        If txtNacimiento.Text <> vbNullString Then
-                            If txtEmail.Text <> vbNullString Then
-                                If txtCargo.Text <> vbNullString Then
-                                    If txtTelFijo.Text <> vbNullString Then
-                                        If txtTelMovil.Text <> vbNullString Then
-                                            Return True
-                                        End If
-                                    End If
-                                End If
-                            End If
-                            Return True
-                        End If
-                    End If
-                End If
-            End If
+    Private Function comprobarCampos() As Boolean
+        If txtNombre.Text <> vbNullString And txtApellido1.Text <> vbNullString And
+            txtApellido2.Text <> vbNullString And txtDireccion.Text <> vbNullString And
+            txtNacimiento.Text <> vbNullString And txtEmail.Text <> vbNullString And
+            cbCargo.Text <> vbNullString And txtTelMovil.Text <> vbNullString And
+            txtTelFijo.Text <> vbNullString Then
+            Return True
         End If
         Return False
     End Function
+
+    Private Sub cbCargo_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cbCargo.SelectedIndexChanged
+        ClsCargo.nombre_cargo = cbCargo.SelectedValue
+        
+    End Sub
 End Class

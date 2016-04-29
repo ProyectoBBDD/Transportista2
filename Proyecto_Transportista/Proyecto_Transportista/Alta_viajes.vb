@@ -1,6 +1,9 @@
 ﻿Public Class Alta_viajes
 
     Private ClsViajes As New Class_Viajes
+    Private ClsEmpleado As New Class_Empleado
+    Private ClsEmpresa As New Class_Empresa
+    Private ClsContenedor As New Class_Contenedores
 
     Private Sub Alta_viajes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If castellano Then
@@ -10,6 +13,20 @@
         ElseIf euskera Then
             traducirEuskera()
         End If
+
+        'Combobox idempleado
+        cbIdEmple.ValueMember = "id_emp"
+        cbIdEmple.DisplayMember = "apellido1_emp"
+        cbIdEmple.DataSource = ClsEmpleado.refrescar()
+        'Combobox idempresa
+        cbIdEmpresa.ValueMember = "id_empresa"
+        cbIdEmpresa.DisplayMember = "nombre_empresa"
+        cbIdEmpresa.DataSource = ClsEmpresa.refrescar()
+        'Combobox idcontenedor
+        cbIdContenedor.ValueMember = "id_contenedor"
+        cbIdContenedor.DisplayMember = "tipo"
+        cbIdContenedor.DataSource = ClsContenedor.refrescar()
+
     End Sub
 
     Public Sub traducirIngles()
@@ -36,9 +53,9 @@
 
     Private Sub btnAlta_Click(sender As Object, e As EventArgs) Handles btnAlta.Click
         If comprobarCampos() Then
-            ClsViajes.id_emp = txtEmpleado.Text
-            ClsViajes.id_empresa = txtEmpresa.Text
-            ClsViajes.id_contenedor = txtContenedor.Text
+            ClsViajes.id_emp = cbIdEmple.Text
+            ClsViajes.id_empresa = cbIdEmpresa.Text
+            ClsViajes.id_contenedor = cbIdContenedor.Text
             ClsViajes.fecha_entrega = txtEntrega.Text
             ClsViajes.precio_viaje = txtGanancia.Text
             If ClsViajes.crearViaje() Then
@@ -73,18 +90,23 @@
         Dispose()
     End Sub
 
-    Private Function comprobarCampos()
-        If txtEmpleado.Text <> vbNullString Then
-            If txtEmpresa.Text <> vbNullString Then
-                If txtContenedor.Text <> vbNullString Then
-                    If txtEntrega.Text <> vbNullString Then
-                        If txtGanancia.Text <> vbNullString Then
-                            Return True
-                        End If
-                    End If
-                End If
-            End If
+    Private Function comprobarCampos() As Boolean
+        If cbIdEmple.Text <> vbNullString And cbIdEmpresa.Text <> vbNullString And cbIdContenedor.Text <> vbNullString And
+            txtEntrega.Text <> vbNullString And txtGanancia.Text <> vbNullString Then
+            Return True
         End If
         Return False
     End Function
+
+    Private Sub cbIdEmple_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cbIdEmple.SelectedIndexChanged
+        ClsEmpleado.id_emp = cbIdEmple.SelectedValue
+    End Sub
+
+    Private Sub cbIdEmpresa_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cbIdEmpresa.SelectedIndexChanged
+        ClsEmpresa.id_empresa = cbIdEmpresa.SelectedValue
+    End Sub
+
+    Private Sub cbIdContenedor_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cbIdContenedor.SelectedIndexChanged
+        ClsContenedor.id_contenedor = cbIdContenedor.SelectedValue
+    End Sub
 End Class

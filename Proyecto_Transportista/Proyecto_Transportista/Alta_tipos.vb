@@ -34,7 +34,7 @@
 
     Private Sub btnAlta_Click(sender As Object, e As EventArgs) Handles btnAlta.Click
         If comprobarCampos() Then
-            ClsTipos.tipo = txtTipo.Text
+            ClsTipos.id_tipo = txtTipo.Text
             ClsTipos.tamaino = txtTamaino.Text
             ClsTipos.peso_maximo = txtPeso.Text
             ClsTipos.ganancia = txtGanancia.Text

@@ -70,17 +70,11 @@
         Dispose()
     End Sub
 
-    Private Function comprobarCampos()
-        If txtNombre.Text <> vbNullString Then
-            If txtDireccion.Text <> vbNullString Then
-                If txtEmail.Text <> vbNullString Then
-                    If txtTelefono.Text <> vbNullString Then
-                        If txtDistancia.Text <> vbNullString Then
-                            Return True
-                        End If
-                    End If
-                End If
-            End If
+    Private Function comprobarCampos() As Boolean
+        If txtNombre.Text <> vbNullString And txtDireccion.Text <> vbNullString And
+            txtEmail.Text <> vbNullString And txtTelefono.Text <> vbNullString And
+            txtDistancia.Text <> vbNullString Then
+            Return True
         End If
         Return False
     End Function

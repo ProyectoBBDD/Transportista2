@@ -1,6 +1,7 @@
 ﻿Public Class Alta_contenedor
 
     Private ClsContenedor As New Class_Contenedores
+    Private ClsTipo As New Class_Tipos
 
     Private Sub Alta_contenedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If castellano Then
@@ -10,6 +11,8 @@
         ElseIf euskera Then
             traducirEuskera()
         End If
+        cbTipo.ValueMember = "tamanio"
+        cbTipo.DataSource = ClsTipo.refrescar()
     End Sub
 
     Public Sub traducirIngles()
@@ -28,7 +31,7 @@
 
     Private Sub btnAlta_Click(sender As Object, e As EventArgs) Handles btnAlta.Click
         If comprobarCampos() Then
-            ClsContenedor.tipo = txtTipo.Text
+            ClsContenedor.tipo = cbTipo.Text
             If ClsContenedor.crearContenedor Then
                 If castellano Then
                     MessageBox.Show("Contenedor dado de alta correctamente")
@@ -62,10 +65,14 @@
     End Sub
 
     Private Function comprobarCampos()
-        If txtTipo.Text <> vbNullString Then
+        If cbTipo.Text <> vbNullString Then
             Return True
         End If
         Return False
     End Function
 
+    Private Sub cbTipo_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cbTipo.SelectedIndexChanged
+        ClsTipo.tamaino = cbTipo.SelectedValue
+
+    End Sub
 End Class

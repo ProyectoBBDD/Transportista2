@@ -64,13 +64,10 @@
         Dispose()
     End Sub
 
-    Private Function comprobarCampos()
-        If txtNombre.Text <> vbNullString Then
-            If txtDescripcion.Text <> vbNullString Then
-                Return True
-            End If
+    Private Function comprobarCampos() As Boolean
+        If txtNombre.Text <> vbNullString And txtDescripcion.Text <> vbNullString Then
+            Return True
         End If
         Return False
     End Function
-    
 End Class

@@ -113,6 +113,19 @@ Public Class Class_Contenedores
         End Try
         Return True
     End Function
+
+    Public Function refrescar() As DataTable
+        Dim dtTabEmpleados As New DataTable
+        SenteciaSQL = "SELECT * FROM " + NOMBRE_TABLA + " WHERE 1=1"
+        Try
+            Comando = New SqlCommand(SenteciaSQL, ocCon)
+            adaptador = New SqlDataAdapter(Comando)
+            adaptador.Fill(dtTabEmpleados)
+            Return dtTabEmpleados
+        Catch ex As Exception
+        End Try
+        Return dtTabEmpleados
+    End Function
 #End Region
 
 End Class

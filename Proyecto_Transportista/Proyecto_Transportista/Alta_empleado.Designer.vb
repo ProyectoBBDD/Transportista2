@@ -37,11 +37,11 @@ Partial Class Alta_empleado
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.lblCargo = New System.Windows.Forms.Label()
-        Me.txtCargo = New System.Windows.Forms.TextBox()
         Me.lblTelFijo = New System.Windows.Forms.Label()
         Me.txtTelFijo = New System.Windows.Forms.TextBox()
         Me.lblTelMovil = New System.Windows.Forms.Label()
         Me.txtTelMovil = New System.Windows.Forms.TextBox()
+        Me.cbCargo = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'btnAlta
@@ -167,13 +167,6 @@ Partial Class Alta_empleado
         Me.lblCargo.TabIndex = 17
         Me.lblCargo.Text = "Cargo"
         '
-        'txtCargo
-        '
-        Me.txtCargo.Location = New System.Drawing.Point(439, 120)
-        Me.txtCargo.Name = "txtCargo"
-        Me.txtCargo.Size = New System.Drawing.Size(122, 20)
-        Me.txtCargo.TabIndex = 16
-        '
         'lblTelFijo
         '
         Me.lblTelFijo.AutoSize = True
@@ -206,17 +199,25 @@ Partial Class Alta_empleado
         Me.txtTelMovil.Size = New System.Drawing.Size(122, 20)
         Me.txtTelMovil.TabIndex = 20
         '
+        'cbCargo
+        '
+        Me.cbCargo.FormattingEnabled = True
+        Me.cbCargo.Location = New System.Drawing.Point(439, 127)
+        Me.cbCargo.Name = "cbCargo"
+        Me.cbCargo.Size = New System.Drawing.Size(121, 21)
+        Me.cbCargo.TabIndex = 22
+        '
         'Alta_empleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(584, 325)
+        Me.Controls.Add(Me.cbCargo)
         Me.Controls.Add(Me.lblTelMovil)
         Me.Controls.Add(Me.txtTelMovil)
         Me.Controls.Add(Me.lblTelFijo)
         Me.Controls.Add(Me.txtTelFijo)
         Me.Controls.Add(Me.lblCargo)
-        Me.Controls.Add(Me.txtCargo)
         Me.Controls.Add(Me.lblEmail)
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.txtNacimiento)
@@ -252,9 +253,9 @@ Partial Class Alta_empleado
     Friend WithEvents lblEmail As System.Windows.Forms.Label
     Friend WithEvents txtEmail As System.Windows.Forms.TextBox
     Friend WithEvents lblCargo As System.Windows.Forms.Label
-    Friend WithEvents txtCargo As System.Windows.Forms.TextBox
     Friend WithEvents lblTelFijo As System.Windows.Forms.Label
     Friend WithEvents txtTelFijo As System.Windows.Forms.TextBox
     Friend WithEvents lblTelMovil As System.Windows.Forms.Label
     Friend WithEvents txtTelMovil As System.Windows.Forms.TextBox
+    Friend WithEvents cbCargo As System.Windows.Forms.ComboBox
 End Class

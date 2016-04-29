@@ -19,9 +19,9 @@ Public Class Class_Tipos
 
 #Region "Encapsulamiento"
 
-    Public Property tipo() As String
+    Public Property id_tipo() As String
         Get
-            tipo = str_tipo
+            id_tipo = str_tipo
         End Get
         Set(ByVal value As String)
             str_tipo = value
@@ -95,6 +95,19 @@ Public Class Class_Tipos
             Return False
         End Try
         Return True
+    End Function
+
+ Public Function refrescar() As DataTable
+        Dim dtTabEmpleados As New DataTable
+        SenteciaSQL = "SELECT * FROM " + NOMBRE_TABLA + " WHERE 1=1"
+        Try
+            Comando = New SqlCommand(SenteciaSQL, ocCon)
+            adaptador = New SqlDataAdapter(Comando)
+            adaptador.Fill(dtTabEmpleados)
+            Return dtTabEmpleados
+        Catch ex As Exception
+        End Try
+        Return dtTabEmpleados
     End Function
 #End Region
 End Class
